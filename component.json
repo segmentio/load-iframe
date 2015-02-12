@@ -2,7 +2,7 @@
   "name": "load-iframe",
   "repo": "segmentio/load-iframe",
   "description": "Component: loads an iframe file by appending an iframe to the DOM.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [
     "iframe",
     "load"
