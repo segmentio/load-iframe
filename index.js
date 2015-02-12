@@ -38,6 +38,9 @@ module.exports = function loadIframe(options, fn){
   // page, which is guaranteed to exist since this Javaiframe is running.
   var iframe = document.createElement('iframe');
   iframe.src = options.src;
+  iframe.width = options.width || 1;
+  iframe.height = options.height || 1;
+  iframe.style.display = 'none';
 
   // If we have a fn, attach event handlers, even in IE. Based off of
   // the Third-Party Javascript script loading example:
