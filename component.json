@@ -1,22 +1,24 @@
 {
   "name": "load-iframe",
   "repo": "segmentio/load-iframe",
-  "description": "Component: loads an iframe file by appending an iframe to the DOM.",
+  "description": "Load an iframe by appending an iframe tag to the DOM.",
   "version": "0.1.0",
+  "license": "MIT",
   "keywords": [
+    "DOM",
     "iframe",
     "load"
   ],
   "license": "MIT",
+  "scripts": [
+    "index.js"
+  ],
   "dependencies": {
-    "segmentio/script-onload": "*",
-    "component/type": "*",
-    "timoxley/next-tick": "0.0.2"
+    "enricomarino/is": "^3.0.1",
+    "ndhoule/next-tick": "^0.2.2",
+    "segmentio/script-onload": "^1.0.2"
   },
   "development": {
     "component/assert": "*"
-  },
-  "scripts": [
-    "index.js"
-  ]
+  }
 }

@@ -1,11 +1,10 @@
-
 /**
  * Module dependencies.
  */
 
+var is = require('is');
 var onload = require('script-onload');
 var tick = require('next-tick');
-var type = require('type');
 
 /**
  * Expose `loadScript`.
@@ -19,7 +18,7 @@ module.exports = function loadIframe(options, fn){
   if (!options) throw new Error('Cant load nothing...');
 
   // Allow for the simplest case, just passing a `src` string.
-  if ('string' == type(options)) options = { src : options };
+  if (is.string(options)) options = { src : options };
 
   var https = document.location.protocol === 'https:' ||
               document.location.protocol === 'chrome-extension:';
@@ -45,7 +44,7 @@ module.exports = function loadIframe(options, fn){
   // If we have a fn, attach event handlers, even in IE. Based off of
   // the Third-Party Javascript script loading example:
   // https://github.com/thirdpartyjs/thirdpartyjs-code/blob/master/examples/templates/02/loading-files/index.html
-  if ('function' == type(fn)) {
+  if (is.fn(fn)) {
     onload(iframe, fn);
   }
 

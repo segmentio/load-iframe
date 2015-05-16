@@ -1,0 +1,25 @@
+{
+  "name": "load-iframe",
+  "description": "Load an iframe by appending an iframe tag to the DOM.",
+  "version": "0.1.0",
+  "license": "MIT",
+  "keywords": [
+    "DOM",
+    "iframe",
+    "load"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/segmentio/load-iframe.git"
+  },
+  "dependencies": {
+    "is": "^3.0.1",
+    "next-tick": "^0.2.2",
+    "script-onload": "^1.0.2"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "phantomjs": "^1.9.16",
+    "zuul": "^3.0.0"
+  }
+}
