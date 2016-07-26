@@ -39,5 +39,5 @@ export interface ILoadIframe {
   (options: ILoadIframeOptions, callback?: IOnloadCallback): HTMLIFrameElement;
 }
 
-const loadIframe: ILoadIframe;
+declare const loadIframe: ILoadIframe;
 export default loadIframe;
