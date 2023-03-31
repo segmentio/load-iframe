@@ -50,8 +50,10 @@ module.exports = function loadIframe(options, fn){
 
   tick(function(){
     // Append after event listeners are attached for IE.
-    var firstScript = document.getElementsByTagName('script')[0];
-    firstScript.parentNode.insertBefore(iframe, firstScript);
+    // var firstScript = document.getElementsByTagName('script')[0];
+    // firstScript.parentNode.insertBefore(iframe, firstScript);
+    document.body.appendChild(iframe)
+    
   });
 
   // Return the iframe element in case they want to do anything special, like
