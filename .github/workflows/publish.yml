@@ -6,7 +6,7 @@ name: Publish Packages
 on:
   push:
     branches:
-      - strat-1996-iframe
+      - master
 
 jobs:
   publish:
