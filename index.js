@@ -15,7 +15,8 @@ var tick = require('next-tick');
  * @api public
  */
 
-module.exports = function loadIframe(options,fn,shouldMoveIframeToBody = false){
+module.exports = function loadIframe(options,fn,shouldMoveIframeToBody){
+  shouldMoveIframeToBody = shouldMoveIframeToBody || false
   if (!options) throw new Error('Cant load nothing...');
 
   // Allow for the simplest case, just passing a `src` string.
