@@ -3,11 +3,6 @@
 
 name: Publish Packages
 
-on:
-  push:
-    branches:
-      - master
-
 jobs:
   publish:
     runs-on: ubuntu-20.04
