@@ -5,33 +5,35 @@ name: Publish Packages
 jobs:
   publish:
    if: startsWith(github.event.head_commit.message, 'Publish') == true
-      runs-on: ubuntu-20.04
+    runs-on: ubuntu-20.04
+
       timeout-minutes: 15
-      steps:
-        - uses: actions/checkout@v3
+      
+    steps:
+      - uses: actions/checkout@v3
 
-        - name: Use Node.js 14.x
-          uses: actions/setup-node@v3
-          with:
-            node-version: 14.x
-            registry-url: 'https://registry.npmjs.org'
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14.x
+          registry-url: 'https://registry.npmjs.org'
 
-        - name: Install Dependencies
-          run: npm ci 
+      - name: Install Dependencies
+        run: npm ci 
 
-        - name : Run Test
-          run : |
-            make test
+      - name : Run Test
+        run : |
+          make test
 
-        - name: Fetch Latest Tags
-          run: |
-            git fetch --tags
+      - name: Fetch Latest Tags
+        run: |
+          git fetch --tags
 
-        - name: Set NPM Token
-          run: |
-            npm set '//registry.npmjs.org/:_authToken' ${{ secrets.NPM_PUBLISH_TOKEN }}
-            npm whoami
+      - name: Set NPM Token
+        run: |
+          npm set '//registry.npmjs.org/:_authToken' ${{ secrets.NPM_PUBLISH_TOKEN }}
+          npm whoami
 
-        - name: Publish
-          run: |
-            npm publish
+      - name: Publish
+        run: |
+          npm publish
