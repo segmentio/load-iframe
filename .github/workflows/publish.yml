@@ -4,12 +4,12 @@
 name: Publish Packages
 on:
   pull_request:
-    branches: [ main ]
+    branches: 
+      - master
 
 jobs:
   publish:
 
-   if: startsWith(github.event.head_commit.message, 'Publish') == true
     runs-on: ubuntu-20.04
 
     timeout-minutes: 15
