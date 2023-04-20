@@ -47,7 +47,7 @@ an `options` object:
 ## License
 
 MIT
-
+<!-- 
 
 [ci-link]: https://circleci.com/gh/segmentio/load-iframe
-[ci-badge]: https://circleci.com/gh/segmentio/load-iframe.svg?style=svg
+[ci-badge]: https://circleci.com/gh/segmentio/load-iframe.svg?style=svg -->
