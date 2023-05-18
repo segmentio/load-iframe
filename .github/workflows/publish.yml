@@ -8,9 +8,6 @@ on:
       - strat-2059
 jobs:
   publish:
-  env:
-      HUSKY: 0
-    if: startsWith(github.event.head_commit.message, 'Publish') == true
     runs-on: ubuntu-20.04
       
     steps:
