@@ -44,6 +44,8 @@ an `options` object:
 }
 ```
 
+## Publish
+Update the Package.json version to version you want to publish and then as soon as your changed merged to master and your head/latest commit message starts with "Publish" , it will publish the mentioned version 
 ## License
 
 MIT
