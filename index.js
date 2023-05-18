@@ -11,12 +11,10 @@ var tick = require('next-tick');
  *
  * @param {Object} options
  * @param {Function} fn
- * @param {Boolean} shouldMoveIframeToBody - specifies whether to move the iframe to head or body
  * @api public
  */
 
-module.exports = function loadIframe(options,fn,shouldMoveIframeToBody){
-  shouldMoveIframeToBody = shouldMoveIframeToBody || false
+module.exports = function loadIframe(options,fn){
   if (!options) throw new Error('Cant load nothing...');
 
   // Allow for the simplest case, just passing a `src` string.
@@ -52,12 +50,8 @@ module.exports = function loadIframe(options,fn,shouldMoveIframeToBody){
 
   tick(function(){
     // Append after event listeners are attached for IE.
-    if(shouldMoveIframeToBody){
-      document.body.appendChild(iframe)
-    } else{
       var firstScript = document.getElementsByTagName('script')[0];
       firstScript.parentNode.insertBefore(iframe, firstScript);
-    }
   });
 
   // Return the iframe element in case they want to do anything special, like
