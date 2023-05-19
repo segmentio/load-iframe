@@ -45,7 +45,16 @@ an `options` object:
 ```
 
 ## Publish
-Update the Package.json version to version you want to publish and then as soon as your changed merged to master and your head/latest commit message starts with "Publish" , it will publish the mentioned version 
+Update the Package.json version to version you want to publish and your head/latest commit message should start with "Publish". As soon as your changes merged to master, it will publish the mentioned version.
+
+For Example :- If you want to publish the changes with version "1.0.1".Just make sure that version should not be already published. 
+Please Cross check from here https://www.npmjs.com/package/load-iframe?activeTab=versions.
+
+Steps to follow
+1. Update Package.json
+    "version": "1.0.0"  => "1.0.1"
+2. Commit the Changes and Message should be start from "Publish" Like "Publish Changes with version 1.0.1".Otherwise your changes would be Pushed but not Published.
+3. Cross verify the version from https://www.npmjs.com/package/load-iframe?activeTab=versions , after PR gets merger to master.
 
 ## License
 
