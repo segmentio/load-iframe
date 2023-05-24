@@ -44,18 +44,14 @@ an `options` object:
 }
 ```
 
-## Publish
-Update the Package.json version to version you want to publish and your head/latest commit message should start with "Publish". As soon as your changes merged to master, it will publish the mentioned version.
+## Publish a new version
+To publish a new version of `load-iframe`
 
-For Example :- If you want to publish the changes with version "1.0.1".Just make sure that version should not be already published. 
-Please Cross check from here https://www.npmjs.com/package/load-iframe?activeTab=versions.
+1. Update package.json with new major|minor|patch version and raise a PR. Ensure that you are not trying to publish an existing version by verifying the published versions in [NPM](https://www.npmjs.com/package/load-iframe?activeTab=versions).
 
-Steps to follow
-1. Update Package.json
-    "version": "1.0.0"  => "1.0.1"
-2. Commit the Changes and Message should be start from "Publish" Like "Publish Changes with version 1.0.1".Otherwise your changes would be Pushed but not Published.
-3. Cross verify the version from https://www.npmjs.com/package/load-iframe?activeTab=versions , after PR gets merger to master.
+2. Ensure that PR title or the Github commit message starts with `Publish`. This is the trigger for Publish Github Action.
 
+3.  Merge the PR. Wait for the Github action to finish and then check [NPM](https://www.npmjs.com/package/load-iframe?activeTab=versions) for the new version.
 ## License
 
 MIT
