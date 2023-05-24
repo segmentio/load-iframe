@@ -44,10 +44,18 @@ an `options` object:
 }
 ```
 
+## Publish a new version
+To publish a new version of `load-iframe`
+
+1. Update package.json with new major|minor|patch version and raise a PR. Ensure that you are not trying to publish an existing version by verifying the published versions in [NPM](https://www.npmjs.com/package/load-iframe?activeTab=versions).
+
+2. Ensure that PR title or the Github commit message starts with `Publish`. This is the trigger for Publish Github Action.
+
+3.  Merge the PR. Wait for the Github action to finish and then check [NPM](https://www.npmjs.com/package/load-iframe?activeTab=versions) for the new version.
 ## License
 
 MIT
-
+<!-- 
 
 [ci-link]: https://circleci.com/gh/segmentio/load-iframe
-[ci-badge]: https://circleci.com/gh/segmentio/load-iframe.svg?style=svg
+[ci-badge]: https://circleci.com/gh/segmentio/load-iframe.svg?style=svg -->
