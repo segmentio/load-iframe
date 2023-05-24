@@ -3,13 +3,11 @@
 
 name: Publish Packages
 on:
-  push:
-    branches:
-      - master
-
+  workflow_dispatch:
+    
 jobs:
   publish:
-    if: startsWith(github.event.head_commit.message, 'Publish') == true
+    if: github.ref == 'refs/heads/strat-2059-copy'
     runs-on: ubuntu-20.04
       
     steps:
@@ -35,4 +33,4 @@ jobs:
 
       - name: Publish
         run: |
-          npm publish
+          npm version
